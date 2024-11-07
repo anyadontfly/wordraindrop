@@ -11,19 +11,19 @@
             background-color: #f0f8ff;
             font-family: Arial, sans-serif;
         }
-        #input-page, #raindrop-page {
+        #start-page, #raindrop-page-lab, #raindrop-page-intern, #raindrop-page-business, #intern-page, #business-page, #broke-page {
             display: none;
             position: absolute;
             width: 100%;
             height: 100%;
+            align-items: center;
         }
-        #input-page {
+        #start-page {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
         }
-        #raindrop-page {
+        #raindrop-page-lab, #raindrop-page-intern, #raindrop-page-business {
             position: relative;
         }
         .raindrop {
@@ -41,20 +41,41 @@
                 transform: translateY(100vh);
             }
         }
+        h1 {text-align: center;}
+        div {text-align: center;}
+        button {text-align: center;}
+        img {text-align: center;}
     </style>
 </head>
 <body>
-    <div id="input-page">
-        <h1>Word Raindrops</h1>
-        <h1>How does this page works?</h1>
-        <h2>Move your cursor near the raindrops to mark them red. Clicking on left button will remove all red raindrops you selected. </h2>
-        <h2>Enter words for raindrops below. </h2>
-        <textarea id="word-input" rows="5" cols="30" placeholder="Enter words separated by commas"></textarea>
-        <br>
+    <div id="start-page">
+        <h1>An alternative future of me!</h1>
+        <h1>Usage: click falling raindrops to represent the efforts I made!</h1>
+        <h1>After making enough "effort", you will be brought to my next stage of alternative future!</h1>
         <button id="start-button">Start</button>
     </div>
 
-    <div id="raindrop-page"></div>
+    <div id="raindrop-page-lab"></div>
+    <div id="raindrop-page-intern"></div>
+    <div id="raindrop-page-business"></div>
+
+    <div id="intern-page">
+        <h1>I'm done with all the lab stuff! I want to find an internship!</h1>
+        <img src="intern.png" alt="intern">
+        <button id="intern-button">Let's Go!</button>
+    </div>
+
+    <div id="business-page">
+        <h1>Wroking 9-5 is not for me! I want to create my own business! </h1>
+        <img src="business.png" alt="business">
+        <button id="business-button">Let's Go!</button>
+    </div>
+
+    <div id="broke-page">
+        <h1>I'm broke since AI has made my business idea looks like a joke! </h1>
+        <img src="AI.png" alt="ai">
+        <button id="broke-button">Restart</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
